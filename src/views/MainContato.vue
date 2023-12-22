@@ -4,8 +4,22 @@
             <PageLoad />
         </div>
         <div v-else>
-            <h1>Contato</h1>
-            <p>{{ data }}</p>
+            <h1>{{ data.titulo }}</h1>
+            <p>{{ data.descricao }}</p>
+            <ul>
+                <li>
+                    <b>E-mail:</b>
+                    {{ data.contato.email }}
+                </li>
+                <li>
+                    <b>Telefone:</b>
+                    {{ data.contato.telefone }}
+                </li>
+                <li>
+                    <b>Endereço:</b>
+                    {{ data.contato.endereco }}
+                </li>
+            </ul>
         </div>
     </div>
    
