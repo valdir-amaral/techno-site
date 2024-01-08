@@ -11,7 +11,7 @@
                 <h2>Aulas</h2>
                 <ul class="aulas">
                     <li v-for="aula in data.aulas" :key="aula.id">
-                        <RouterLink :to="{name: 'AulaDetail', params:{aula: aula.id}}">{{ aula.nome }}</RouterLink>
+                        <RouterLink :to="{name: 'aula', params:{aula: aula.id}}">{{ aula.nome }}</RouterLink>
                     </li>
                 </ul>
             </div>
@@ -39,12 +39,17 @@ export default {
 </script>
 
 <style>
-    .aulas li {
+    .aulas li a {
         display: block;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
         background-color: white;
         padding: 20px;
         margin-bottom: 10px;
         border-radius: 4px;
+    }
+
+    .aulas li a.router-link-active {
+        background-color: #4B8;
+        color: white;
     }
 </style>
